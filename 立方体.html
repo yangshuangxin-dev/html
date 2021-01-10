@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立方体</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    #wrap {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background-color: gray;
+        border: 1px solid;
+        perspective: 200px;
+
+        
+    }
+    
+    
+    #wrap>.box {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+
+        
+
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+
+        transform-style: preserve-3d;
+        transition: 2s;
+        transform-origin: center center -50px;
+
+    }
+
+    #wrap>.box>div {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        text-align: center;
+        font: 50px/100px "微软雅黑";
+
+        backface-visibility: hidden;
+    }
+
+    #wrap>.box>div:nth-child(5) {
+        top: -100px;
+        transform-origin: bottom;
+        transform: rotateX(90deg);
+    }
+
+    #wrap>.box>div:nth-child(6) {
+        bottom: -100px;
+        transform-origin: top;
+        transform: rotateX(-90deg);
+    }
+
+    #wrap>.box>div:nth-child(3) {
+        left: -100px;
+        transform-origin: right;
+        transform:rotateY(-90deg);
+    }
+
+    #wrap>.box>div:nth-child(4){
+        right: -100px;
+        transform-origin: left;
+        transform:rotateY(90deg);
+    }
+
+    #wrap>.box>div:nth-child(2)
+    {
+        transform:translateZ(-100px) rotateX(180deg);
+    }
+    #wrap>.box>div:nth-child(1)
+    {
+        z-index: 1;
+    }
+
+    #wrap:hover .box{
+        
+        transform: rotateX(180deg);
+    }
+</style>
+
+
+
+<body>
+    <div id="wrap">
+        <div class="box">
+            <div>前</div>
+            <div>后</div>
+            <div>左</div>
+            <div>右</div>
+            <div>上</div>
+            <div>下</div>
+        </div>
+    </div>
+</body>
+
+</html>

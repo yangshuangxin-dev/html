@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        #wrap{
+            position: absolute;
+            left:50%;
+            top:50%;
+            margin-left: -100px;
+            margin-top: -100px;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            border-radius: 50%;
+            background-color: gray;
+            text-align: center;
+            font: 50px/200px "微软雅黑";
+            transition: 1s;
+
+            perspective: 100px;
+        }
+
+        #wrap:hover{
+            transform:rotateY(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+      杨双鑫
+    </div>
+</body>
+</html>

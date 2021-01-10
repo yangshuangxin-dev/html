@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>按钮高亮</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        a{
+            display:inline-block;
+            text-decoration:none;
+            color: white;
+            width: 60px;
+            height: 30px;
+            background-color: gray;
+            text-align: center;
+            line-height: 30px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            font-weight: bold;   
+            transition: 2s;
+
+
+            position: absolute;    
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        a:hover{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <a href="javascript:;">HOME</a>
+</body>
+</html>
